@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PP95Z4FQKJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PP95Z4FQKJ');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#742e3e">
+  <title>Smart Mandir | Darshan Gallery</title>
+  <style>
+    :root { --ink: #282d29; --muted: #71746e; --wine: #742e3e; --green: #36584a; --line: #e3e5df; --paper: #fcfdfb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Trebuchet MS", sans-serif; letter-spacing: 0; }
+    button, input, a { -webkit-tap-highlight-color: transparent; }
+    button, input { font: inherit; }
+    button, a { touch-action: manipulation; }
+    button { cursor: pointer; }
+    button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #a9792d; outline-offset: 5px; }
+    header { border-top: 5px solid var(--wine); border-bottom: 1px solid var(--line); }
+    .header-inner, main, .footer-inner { max-width: 1240px; margin: auto; padding-left: 40px; padding-right: 40px; }
+    .header-inner { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 13px; }
+    .brand-mark { display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid var(--wine); border-radius: 50%; color: var(--wine); font-family: Georgia, serif; font-size: 17px; }
+    .brand-name { font-family: Georgia, serif; font-size: 25px; }
+    .header-label { font-size: 11px; color: var(--green); text-transform: uppercase; letter-spacing: 2px; }
+    main { padding-top: 49px; padding-bottom: 72px; }
+    .intro { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 34px; }
+    .eyebrow { font-size: 11px; font-weight: bold; letter-spacing: 2px; color: var(--wine); text-transform: uppercase; margin: 0 0 12px; }
+    h1 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; font-size: 43px; margin: 0; line-height: 1.15; }
+    .intro-copy { margin: 13px 0 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .collection-note { color: var(--green); font: italic 18px Georgia, serif; padding-bottom: 5px; white-space: nowrap; }
+    .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 17px 0; margin-bottom: 27px; }
+    .collection-title { font-size: 13px; font-weight: bold; }
+    .count { color: var(--muted); font-size: 12px; font-weight: normal; margin-left: 9px; }
+    .search { display: flex; align-items: center; gap: 9px; width: 260px; color: var(--muted); }
+    .search svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .search input { min-width: 0; width: 100%; padding: 7px 0; background: transparent; border: 0; color: var(--ink); font-size: 13px; }
+    .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px 26px; }
+    .deity { min-width: 0; animation: arrive .5s ease both; }
+    .deity:nth-child(2) { animation-delay: .06s; }
+    .deity:nth-child(3) { animation-delay: .12s; }
+    .deity:nth-child(4) { animation-delay: .18s; }
+    .deity:nth-child(5) { animation-delay: .24s; }
+    .image-button { width: 100%; aspect-ratio: 1 / 1.08; display: grid; place-items: center; position: relative; border: 1px solid var(--line); border-radius: 4px; padding: 18px; background: #f0f2ed; overflow: hidden; }
+    .image-button img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain; transition: transform .25s; }
+    .image-button:hover img { transform: scale(1.025); }
+    .view-icon { position: absolute; right: 10px; bottom: 10px; width: 32px; height: 32px; display: grid; place-items: center; background: #fcfdfbf0; color: var(--green); border-radius: 50%; box-shadow: 0 1px 8px #0001; }
+    svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .card-caption { display: flex; align-items: baseline; gap: 12px; margin-top: 15px; }
+    .card-number { font-size: 10px; color: var(--wine); }
+    h2 { font: normal 21px/1.35 Georgia, serif; margin: 0; overflow-wrap: anywhere; }
+    .card-subtitle { margin: 5px 0 0 25px; font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .audio-title { margin: 16px 0 8px 25px; font-size: 12px; color: var(--green); }
+    .deity-audio { display: block; width: calc(100% - 25px); height: 54px; margin-left: 25px; }
+    .empty { padding: 65px 12px; text-align: center; color: var(--muted); }
+    [hidden] { display: none !important; }
+    footer { border-top: 1px solid var(--line); background: #f2f5f0; }
+    .footer-inner { min-height: 83px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 11px; }
+    .footer-brand { color: var(--green); font: 17px Georgia, serif; }
+    dialog { border: 1px solid #ffffff30; border-radius: 6px; padding: 0; background: #f8faf6; width: min(940px, calc(100% - 32px)); max-height: calc(100dvh - 32px); color: var(--ink); }
+    dialog::backdrop { background: #111b16df; }
+    .viewer-header { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 15px 20px; border-bottom: 1px solid var(--line); }
+    .viewer-title { font: normal 20px Georgia, serif; margin: 0; }
+    .icon-button { display: inline-grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; padding: 0; color: var(--green); background: transparent; border: 1px solid var(--line); border-radius: 4px; text-decoration: none; }
+    .icon-button:hover { background: #e8eee5; }
+    .viewer-image { width: 100%; height: min(65dvh, 650px); padding: 18px; object-fit: contain; display: block; background: #e9ede6; }
+    .viewer-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; }
+    .viewer-actions { display: flex; align-items: center; gap: 8px; }
+    .viewer-position { color: var(--muted); font-size: 12px; }
+    body.viewer-open { overflow: hidden; }
+    @keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 800px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } .collection-note { display: none; } }
+    @media (max-width: 520px) { .header-inner, main, .footer-inner { padding-left: 20px; padding-right: 20px; } .header-inner { min-height: 80px; } .brand-name { font-size: 22px; } .header-label { font-size: 9px; letter-spacing: 1px; } main { padding-top: 32px; padding-bottom: 45px; } h1 { font-size: 35px; } .intro { margin-bottom: 25px; } .toolbar { align-items: stretch; flex-direction: column; gap: 13px; } .search { width: 100%; } .gallery { grid-template-columns: 1fr; gap: 28px; } .image-button { aspect-ratio: 1 / 1; } .footer-inner { align-items: start; justify-content: center; flex-direction: column; gap: 8px; padding-top: 20px; padding-bottom: 20px; } .viewer-header { padding: 10px 12px; } .viewer-title { font-size: 17px; } .viewer-footer { padding: 10px 12px; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="./index.html" aria-label="Smart Mandir home"><span class="brand-mark" aria-hidden="true">SM</span><span class="brand-name">Smart Mandir</span></a>
+      <span class="header-label">A moment of devotion</span>
+    </div>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">The sacred collection</p><h1 id="page-title">Darshan Gallery</h1><p class="intro-copy">May your day begin with peace and blessings.</p></div>
+      <span class="collection-note">Faith. Peace. Devotion.</span>
+    </section>
+    <div class="toolbar">
+      <div class="collection-title">All Deities <span class="count" id="count" role="status">7 images</span></div>
+      <label class="search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="search" type="search" aria-label="Search deities" placeholder="Search deities..." autocomplete="off"></label>
+    </div>
+    <section class="gallery" id="gallery" aria-label="Deity images"></section>
+    <p class="empty" id="empty" hidden>No deities found.</p>
+    <noscript><p>Enable JavaScript to view the gallery, or open the images below.</p><ul><li><a href="God/1.Laxmi%20Ganesh%20Sarswati.jpg">Lakshmi, Ganesh &amp; Saraswati</a></li><li><a href="God/2.Durgamaa.jpg">Durga Maa</a></li><li><a href="God/3.hanumanji.jpg">Hanuman Ji</a></li><li><a href="God/4.ramhanunan.jpg">Vishnu Ji</a></li><li><a href="God/5.shiv-m2.jpg">Lord Shiva</a></li><li><a href="God/Radha_Krishna.jpg">Radha Krishna</a></li><li><a href="God/ShivParivar.jpg">Shiv Parivar</a></li></ul></noscript>
+  </main>
+  <footer><div class="footer-inner"><span class="footer-brand">Smart Mandir</span><span>A sacred space for everyday devotion.</span></div></footer>
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-header"><h2 class="viewer-title" id="viewer-title"></h2><button class="icon-button" id="close" type="button" aria-label="Close image" title="Close (Escape)"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <img class="viewer-image" id="viewer-image" alt="">
+    <div class="viewer-footer"><span class="viewer-position" id="position" aria-live="polite"></span><div class="viewer-actions"><a class="icon-button" id="download" download aria-label="Download image" title="Download image"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg></a><button class="icon-button" id="previous" type="button" aria-label="Previous image" title="Previous image (Left arrow)"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></button><button class="icon-button" id="next" type="button" aria-label="Next image" title="Next image (Right arrow)"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></svg></button></div></div>
+  </dialog>
+  <script>
+    const deities = [
+      { name: 'Ganesh Ji', subtitle: 'Wisdom, prosperity & new beginnings', file: '5.shiv-m2.jpg', keywords: 'shiv mahadev shankar', audio: 'music/Ganesh_Arti.mp3', audioTitle: 'Ganesh Arti' },
+      { name: 'Radha Krishna', subtitle: 'Love, compassion & divine devotion', file: 'Radha_Krishna.jpg', keywords: 'radha krishna kanha govinda', audio: 'music/Radha_Krishna_Arti.mp3', audioTitle: 'Radha Krishna Arti' },
+      { name: 'Shiv Parivar', subtitle: 'Family, harmony & divine strength', file: 'ShivParivar.jpg', keywords: 'shiv parvati ganesh kartikeya mahadev', audio: 'music/ShivParivar.mp3', audioTitle: 'Shiv Parivar Arti' },
+      { name: 'Lakshmi, Ganesh & Saraswati', subtitle: 'Prosperity, wisdom & new beginnings', file: '1.Laxmi Ganesh Sarswati.jpg', keywords: 'laxmi ganesha sarswati', audio: 'music/Lakshmi_Arti.mp3', audioTitle: 'Lakshmi Arti' },
+      { name: 'Durga Maa', subtitle: 'Strength & divine protection', file: '2.Durgamaa.jpg', keywords: 'durga mother devi', audio: 'music/Durga_Chalisa.mp3', audioTitle: 'Durga Chalisa' },
+      { name: 'Hanuman Ji', subtitle: 'Courage, devotion & strength', file: '3.hanumanji.jpg', keywords: 'hanuman bajrang bali', audio: 'music/Hanuman_Chalisa.mp3', audioTitle: 'Hanuman Chalisa' },
+      { name: 'Vishnu Ji', subtitle: 'Protection, balance & preservation', file: '4.ramhanunan.jpg', keywords: 'rama sita lakshman hanuman', audio: 'music/Vishnu_Aarti.mp3', audioTitle: 'Vishnu Aarti' }
+    ];
+    const gallery = document.getElementById('gallery');
+    const viewer = document.getElementById('viewer');
+    let currentIndex = 0;
+    let visibleIndices = deities.map((deity, index) => index);
+    const imagePath = deity => 'God/' + encodeURIComponent(deity.file);
+
+    deities.forEach((deity, index) => {
+      const card = document.createElement('article');
+      card.className = 'deity';
+      const button = document.createElement('button');
+      button.className = 'image-button';
+      button.type = 'button';
+      button.setAttribute('aria-label', 'View ' + deity.name);
+      button.setAttribute('aria-haspopup', 'dialog');
+      const image = document.createElement('img');
+      image.src = imagePath(deity);
+      image.alt = deity.name;
+      image.decoding = 'async';
+      button.append(image);
+      const icon = document.createElement('span');
+      icon.className = 'view-icon';
+      icon.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg>';
+      button.append(icon);
+      button.addEventListener('click', () => {
+        showImage(index);
+        viewer.showModal();
+        document.body.classList.add('viewer-open');
+      });
+      const caption = document.createElement('div');
+      caption.className = 'card-caption';
+      const number = document.createElement('span');
+      number.className = 'card-number';
+      number.textContent = String(index + 1).padStart(2, '0');
+      const title = document.createElement('h2');
+      title.textContent = deity.name;
+      caption.append(number, title);
+      const subtitle = document.createElement('p');
+      subtitle.className = 'card-subtitle';
+      subtitle.textContent = deity.subtitle;
+      card.append(button, caption, subtitle);
+      if (deity.audio) {
+        const audioTitle = document.createElement('p');
+        audioTitle.className = 'audio-title';
+        audioTitle.textContent = deity.audioTitle;
+        const audio = document.createElement('audio');
+        audio.className = 'deity-audio';
+        audio.controls = true;
+        audio.preload = 'none';
+        audio.src = deity.audio;
+        audio.setAttribute('aria-label', 'Play ' + deity.audioTitle);
+        card.append(audioTitle, audio);
+      }
+      gallery.append(card);
+    });
+
+    function showImage(index) {
+      currentIndex = index;
+      const deity = deities[index];
+      document.getElementById('viewer-title').textContent = deity.name;
+      const image = document.getElementById('viewer-image');
+      image.src = imagePath(deity);
+      image.alt = deity.name;
+      document.getElementById('download').href = imagePath(deity);
+      document.getElementById('position').textContent = (visibleIndices.indexOf(index) + 1) + ' / ' + visibleIndices.length;
+    }
+
+    function navigate(direction) {
+      const position = visibleIndices.indexOf(currentIndex);
+      showImage(visibleIndices[(position + direction + visibleIndices.length) % visibleIndices.length]);
+    }
+
+    document.getElementById('search').addEventListener('input', event => {
+      const query = event.target.value.trim().toLowerCase();
+      visibleIndices = [];
+      deities.forEach((deity, index) => {
+        const matches = (deity.name + ' ' + deity.keywords).toLowerCase().includes(query);
+        gallery.children[index].hidden = !matches;
+        if (matches) visibleIndices.push(index);
+      });
+      const count = visibleIndices.length;
+      document.getElementById('count').textContent = count + (count === 1 ? ' image' : ' images');
+      document.getElementById('empty').hidden = count !== 0;
+    });
+    document.getElementById('close').addEventListener('click', () => viewer.close());
+    viewer.addEventListener('close', () => document.body.classList.remove('viewer-open'));
+    viewer.addEventListener('click', event => {
+      if (event.target !== viewer) return;
+      const bounds = viewer.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) viewer.close();
+    });
+    document.getElementById('previous').addEventListener('click', () => navigate(-1));
+    document.getElementById('next').addEventListener('click', () => navigate(1));
+    viewer.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        event.preventDefault();
+        navigate(event.key === 'ArrowLeft' ? -1 : 1);
+      }
+    });
+  </script>
+</body>
+</html>
